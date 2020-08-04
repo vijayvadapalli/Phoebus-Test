@@ -70,25 +70,6 @@ public class CustomerController {
         return customerResource;
     }
 
-
-//    /**
-//     * Get Customer from accountId
-//     *
-//     * @param id accountId
-//     * @return Customer
-//     */
-//    @GetMapping("/accounts/{id}/customer")
-//    public Customer retrieveCustomerByAccount(@PathVariable Long id) {
-//        Customer customer = accountService.retrieveCustomer(id);
-//
-//        if (customer == null) {
-//            logger.trace("Account not found for account id" + id);
-//            throw new CustomerNotFoundException("Account Id: " + id);
-//        }
-//
-//        return customer;
-//    }
-
     protected List<Account> retrieveAllAccounts() {
         return accountRepository.findAll();
     }

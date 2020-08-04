@@ -29,3 +29,17 @@ The following REST URL's are supported
 {
         "accountNumber": 14005
 }
+
+
+### Security is disabled by default.
+ * To enable it just uncomment the following section in pom.xml
+ 
+          <dependency>
+             <groupId>org.springframework.boot</groupId>
+             <artifactId>spring-boot-starter-security</artifactId>
+         </dependency>
+ * Username and password set are as follows
+ 
+    spring.security.user.name=phoebus
+    
+    spring.security.user.password=test        
