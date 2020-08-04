@@ -5,11 +5,11 @@ The following REST URL's are supported
 
 * [Get all Customers](http://localhost:8080/customers)
 * [Get a Customer](http://localhost:8080/customer/10001)
-* [Create a new customer (Use HTTP POST)](http://localhost:8080/customer)
+* [Create a new customer (HTTP POST)](http://localhost:8080/customer)
     - Validations:
         - foreName should be at least 3 chars long
         - surName should be at least 2 chars long
-        - birthDate should bot be in past
+        - birthDate should not be in past
 
     - Sample json
         - {
@@ -17,7 +17,7 @@ The following REST URL's are supported
           "surName": "Field",
           "birthDate": "2020-08-03T23:00:00.000+00:00"
         }
-* [Delete a Customers](http://localhost:8080/customer/10001)
+* [Delete a Customers (HTTP DELETE)](http://localhost:8080/customer/10001)
 * [Get account for a Customer](http://localhost:8080/customer/10003/accounts)
 * [List all Accounts](http://localhost:8080/accounts)
 * [Create a account for a Customer (Use HTTP Post)](http://localhost:8080/customer/10002/accounts)
@@ -40,4 +40,9 @@ The following REST URL's are supported
          </dependency>
  * Username and password set are as follows
       - spring.security.user.name=phoebus
-      - spring.security.user.password=test        
+      - spring.security.user.password=test     
+      
+
+### Have used h2 database
+ * TO access h2 console use
+    -  http://localhost:8080/h2-console          
