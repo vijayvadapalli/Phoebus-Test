@@ -1,7 +1,9 @@
 package com.phoebus.test.service;
 
-import com.phoebus.test.dao.Account;
-import com.phoebus.test.dao.Customer;
+import com.phoebus.test.dao.AccountRepository;
+import com.phoebus.test.dao.CustomerRepository;
+import com.phoebus.test.model.Account;
+import com.phoebus.test.model.Customer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

@@ -1,8 +1,8 @@
 package com.phoebus.test.controller;
 
-import com.phoebus.test.dao.Account;
-import com.phoebus.test.dao.Customer;
-import com.phoebus.test.service.CustomerNotFoundException;
+import com.phoebus.test.model.Account;
+import com.phoebus.test.model.Customer;
+import com.phoebus.test.exception.CustomerNotFoundException;
 import com.phoebus.test.service.AccountService;
 import com.phoebus.test.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,7 +23,7 @@ public class AccountController {
 	private CustomerService customerService;
 
 	@GetMapping("/customer/{id}/accounts")
-	public List<Account> retrieveAllCustomers(@PathVariable Long id) {
+	public List<Account> retrieveAllAccounts(@PathVariable Long id) {
 		Customer customer = customerService.retrieveCustomer(id);
 
 		if (customer == null)

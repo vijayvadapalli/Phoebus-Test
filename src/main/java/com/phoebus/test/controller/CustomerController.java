@@ -1,8 +1,9 @@
 package com.phoebus.test.controller;
 
-import com.phoebus.test.dao.Account;
-import com.phoebus.test.dao.Customer;
-import com.phoebus.test.service.CustomerNotFoundException;
+import com.phoebus.test.dao.AccountRepository;
+import com.phoebus.test.model.Account;
+import com.phoebus.test.model.Customer;
+import com.phoebus.test.exception.CustomerNotFoundException;
 import com.phoebus.test.service.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.hateoas.EntityModel;

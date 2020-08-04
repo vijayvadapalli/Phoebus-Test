@@ -1,6 +1,6 @@
 package com.phoebus.test.service;
 
-import com.phoebus.test.dao.Customer;
+import com.phoebus.test.model.Customer;
 
 import java.util.List;
 
