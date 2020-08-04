@@ -25,6 +25,16 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    public Customer retrieveCustomer(Long id) {
+        Optional<Account> accountOptional = accountRepository.findById(id);
+
+        if (accountOptional.isPresent())
+            return accountOptional.get().getCustomer();
+        else
+            return null;
+    }
+
+    @Override
     public List<Account> retrieveAllAccounts(Long id) {
         Optional<Customer> customerOptional = customerRepository.findById(id);
 

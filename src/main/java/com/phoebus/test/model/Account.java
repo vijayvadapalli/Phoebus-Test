@@ -22,7 +22,7 @@ public class Account {
     private Customer customer;
 
     @Min(value=1000, message="must be equal or greater than 1000")
-    @ApiModelProperty(notes="Account number should be positive")
+    @ApiModelProperty(notes="Account number should be greater than 1000")
     @Column(name="accountNumber")
     private int accountNumber;
 

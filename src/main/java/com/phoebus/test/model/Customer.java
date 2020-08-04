@@ -21,7 +21,7 @@ public class Customer {
     @OneToMany(mappedBy="customer", cascade = CascadeType.REMOVE)
     private List<Account> accounts;
 
-    @Size(min=2, message="Forename should have atleast 3 characters")
+    @Size(min=3, message="Forename should have atleast 3 characters")
     @ApiModelProperty(notes="Forename should have atleast 3 characters")
     @Column(name="foreName")
     private String foreName;

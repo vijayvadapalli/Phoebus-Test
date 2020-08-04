@@ -1,28 +1,31 @@
-# Getting Started
+# Know your Customer - Test
 
-### Reference Documentation
-For further reference, please consider the following sections:
+### To open it in swaggerUI go to URL http://localhost:8080 in browser (Chrome)
+The following REST URL's are supported
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
-* [Spring Boot Maven Plugin Reference Guide](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/maven-plugin/reference/html/)
-* [Create an OCI image](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/maven-plugin/reference/html/#build-image)
-* [Spring Security](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/htmlsingle/#boot-features-security)
-* [Spring Boot Actuator](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/htmlsingle/#production-ready)
-* [Spring Web](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/htmlsingle/#boot-features-developing-web-applications)
-* [Spring HATEOAS](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/htmlsingle/#boot-features-spring-hateoas)
-* [Spring Boot DevTools](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/htmlsingle/#using-boot-devtools)
-* [Spring Web Services](https://docs.spring.io/spring-boot/docs/2.3.2.RELEASE/reference/htmlsingle/#boot-features-webservices)
+* [Get all Customers](http://localhost:8080/customers)
+* [Get a Customers](http://localhost:8080/customer/10001)
+* [Create a customer (Use HTTP POST)](http://localhost:8080/customer)
 
-### Guides
-The following guides illustrate how to use some features concretely:
+*   Validations: 
+-   foreName should be at least 3 chars long
+-   surName should be at least 2 chars long
+-   birthDate should bot be in past
 
-* [Securing a Web Application](https://spring.io/guides/gs/securing-web/)
-* [Spring Boot and OAuth2](https://spring.io/guides/tutorials/spring-boot-oauth2/)
-* [Authenticating a User with LDAP](https://spring.io/guides/gs/authenticating-ldap/)
-* [Building a RESTful Web Service with Spring Boot Actuator](https://spring.io/guides/gs/actuator-service/)
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
-* [Building a Hypermedia-Driven RESTful Web Service](https://spring.io/guides/gs/rest-hateoas/)
-* [Producing a SOAP web service](https://spring.io/guides/gs/producing-web-service/)
+- Sample json
+{
+      "foreName": "Tom",
+      "surName": "Field",
+      "birthDate": "2020-08-03T23:00:00.000+00:00"
+  }
+* [Delete a Customers](http://localhost:8080/customer/10001)
+* [Get account for a Customer](http://localhost:8080/customer/10003/accounts)
+* [List all Accounts](http://localhost:8080/accounts)
+* [Create a account for a Customer (Use HTTP Post)](http://localhost:8080/customer/10002/accounts)
 
+*   Validations: 
+-   accountNumber should be greater than 1000
+- Sample json, which will create accountNumber 14005 for Customer 10002
+{
+        "accountNumber": 14005
+}
